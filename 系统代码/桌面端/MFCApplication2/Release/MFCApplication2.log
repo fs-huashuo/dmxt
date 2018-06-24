@@ -1,0 +1,23 @@
+﻿生成启动时间为 2018/6/24 16:46:36。
+     1>项目“C:\Users\暗夜小草\Desktop\MFCApplication2\MFCApplication2\MFCApplication2.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\MFCApplication2.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\MFCApplication2.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MFCApplication2.cpp MFCApplication2Dlg.cpp
+         MFCApplication2.cpp
+         MFCApplication2Dlg.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D NDEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /IRelease\ /nologo /fo"Release\MFCApplication2.res" MFCApplication2.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\暗夜小草\Desktop\MFCApplication2\Release\MFCApplication2.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\暗夜小草\Desktop\MFCApplication2\Release\MFCApplication2.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\暗夜小草\Desktop\MFCApplication2\Release\MFCApplication2.lib" /MACHINE:X86 /SAFESEH Release\MFCApplication2.res
+         Release\MFCApplication2.obj
+         Release\MFCApplication2Dlg.obj
+         Release\stdafx.obj
+         正在生成代码
+         已完成代码的生成
+         MFCApplication2.vcxproj -> C:\Users\暗夜小草\Desktop\MFCApplication2\Release\MFCApplication2.exe
+     1>已完成生成项目“C:\Users\暗夜小草\Desktop\MFCApplication2\MFCApplication2\MFCApplication2.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:10.88

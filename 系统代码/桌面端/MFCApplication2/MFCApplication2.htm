@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0032)http://192.168.1.109:8080/exams/ -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="IE=11.0000"
+          http-equiv="X-UA-Compatible">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=GB18030">
+    <title>点名系统</title>
+    <script src="res:/CSS/#131" type=text/javascript></script>
+    <link href="res:/CSS/#131" rel="stylesheet" type="text/css">
+    <meta name="GENERATOR" content="MSHTML 11.00.10570.1001">
+</head>
+<body text="#666666" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <div align="center">
+        <table width="1273" height="900" background="res:/JPG/#130" border="0"
+               cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td width="33%" height="30">&nbsp;</td>
+                    <td width="34%">&nbsp;</td>
+                    <td width="33%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="135">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+                            <form name="loginForm" onsubmit="return checkloginForm(this)" action="/exams/login.do"
+                                  method="post"></form>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">请输入用户名和密码，选择身份登陆</td>
+                                </tr>
+                                <tr>
+                                    <td width="20%"></td>
+                                    <td width="80%"></td>
+                                </tr>
+                                <tr>
+                                    <td>身&nbsp;&nbsp;份：</td>
+                                    <td>
+                                        <input name="role" type="radio" value="１">          教师
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>用户名：</td>
+                                    <td>
+                                        <label>
+                                            <input name="username" style="width: 150px;" type="text">
+                                        </label>
+                                    </td>
+                                </tr>
+                               
+                                <tr>
+                                    <td>密&nbsp;&nbsp;码：</td>
+                                    <td>
+                                        <label>
+                                            <input name="password" style="width: 150px;" type="password">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        
+                                      <input onclick="window.location.href = 'res:/html/#133'" type="button" value="注册">
+                                        &nbsp;&nbsp;           <input type="submit" value="登陆">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                    <td height="20">
+                        &nbsp;&nbsp;&nbsp;<font color="blueviolet"
+                                                size="6">计算机工程实践第11组</font>
+                    </td>
+                    <td height="20">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+if(!document.loginForm.role[0].checked&&!document.loginForm.role[1].checked){
+	document.loginForm.role[0].checked = true;
+}
+function checkloginForm(lf){
+	if(lf.username.value==""||lf.password.value==""){
+		alert("请输入用户名和密码!");
+		return false;
+	}else{
+		return true;
+	}
+}
+        </script>
+    </div>
+</body>
+</html>

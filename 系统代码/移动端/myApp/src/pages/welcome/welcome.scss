@@ -1,0 +1,19 @@
+page-welcome {
+  .full-image{
+    max-width: 100%;
+    opacity: 0.3;
+  }
+  .fixed-mid{
+    position: absolute;
+    margin-top: 100px;
+    height: 100px;
+    width: auto;
+    align-content: center;
+    z-index: 10;
+  }
+  .fixed-bottom{
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+  }
+}

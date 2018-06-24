@@ -1,0 +1,52 @@
+<!--
+  Generated template for the EditStudentCoursePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>课程信息</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list>
+    <ion-item no-padding>
+      <ion-label>课程编号:</ion-label>
+      <ion-note item-end>{{course_number}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item no-padding>
+      <ion-label>课程名称:</ion-label>
+      <ion-note item-end>{{course_name}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item no-padding>
+      <ion-label>课程时间:</ion-label>
+      <ion-note item-end>{{class_time}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item no-padding>
+      <ion-label>课程老师:</ion-label>
+      <ion-note item-end>{{name}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item no-padding>
+      <ion-label>课程地点:</ion-label>
+      <ion-note item-end>{{class_location}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col><button type="submit" block ion-button color="primary" (click)="deleteCourse()">删除</button></ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

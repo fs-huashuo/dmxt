@@ -1,0 +1,16 @@
+<div *ngIf="persondata.rolename=='老师'">
+
+<ion-tabs  class="tabs-icon-text" [color]="isAndroid ? 'royal' : 'primary'">
+  <ion-tab [root]="addClick" [rootParams]="persondata" tabTitle="签到" tabIcon="checkmark"></ion-tab>
+  <ion-tab [root]="teacherCourse" [rootParams]="persondata" tabTitle="授课计划" tabIcon="book"></ion-tab>
+  <ion-tab [root]="tab3Root" [rootParams]="persondata" tabTitle="设置" tabIcon="settings"></ion-tab>
+</ion-tabs>
+</div>
+<div *ngIf="persondata.rolename=='学生'">
+
+  <ion-tabs  class="tabs-icon-text" [color]="isAndroid ? 'royal' : 'primary'">
+    <ion-tab [root]="tab1Root" [rootParams]="persondata" tabTitle="签到" tabIcon="checkmark"></ion-tab>
+    <ion-tab [root]="tab2Root" [rootParams]="persondata" tabTitle="课程表" tabIcon="book"></ion-tab>
+    <ion-tab [root]="tab3Root" [rootParams]="persondata" tabTitle="设置" tabIcon="settings"></ion-tab>
+  </ion-tabs>
+</div>

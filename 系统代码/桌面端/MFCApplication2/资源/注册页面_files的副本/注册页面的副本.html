@@ -1,0 +1,119 @@
+
+<!-- saved from url=(0041)http://192.168.1.109:8080/exams/regist.do -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+<title>点名系统</title>
+
+<link type="text/css" href="./注册页面_files/style.css" rel="stylesheet">
+<!--<base href="http://192.168.1.109:8080/exams/regist.jsp">--><base href=".">
+<script>
+	function checkstudentform(sf){
+		var message = "";
+		var i = 1;
+		if(!isUsername(sf.username.value)){
+			message += i+") 用户名只能输入6-30个字母、数字、下划线\n";
+			i++;
+		}
+		if(!isUsername(sf.oldpassword.value)){
+			message += i+") 密码只能输入6-30个字母、数字、下划线\n";
+			i++;
+		}
+		if(sf.oldpassword.value!=sf.newpassword.value){
+			message += i+") 两次密码不一致\n";
+			i++;
+		}
+		if(sf.name.value==""||sf.name.value.length>15){
+			message += i+") 姓名不能为空且小于15字\n";
+			i++;
+		}
+		if(sf.address.value==""||sf.address.value.length>20){
+			message += i+") 地址不能为空且小于20字\n";
+			i++;
+		}
+		if(sf.email.value==""||sf.email.value.length>40){
+			message += i+") Email不能为空且小于40字母\n";
+			i++;
+		}			
+		if(message!=""){
+			alert(message);
+			return false;
+		}else{
+			return true;
+		}
+											
+	}
+	//校验用户名：只能输入6-20个字母、数字、下划线
+	function isUsername(s){
+		var patrn=/^(\w){6,30}$/;
+		if (!patrn.exec(s)) 
+			return false;
+		return true;
+	}	
+</script>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" text="#666666" link="#336699" vlink="#cc6699" alink="#ffcc33">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr> 
+    <td background="./注册页面_files/bg_top.jpg"><img src="./注册页面_files/spacer.gif" width="1" height="25"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr> 
+    <td><img src="./注册页面_files/spacer.gif" width="10" height="1"></td>
+    <td width="510"><img src="./注册页面_files/obj_sitetitle.gif" width="207" height="29"></td>
+    <td>福州大学<br>
+      数学与计算机科学学院<br>
+      计算机工程训练第11组</td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr> 
+    <td background="./注册页面_files/obj_bar.gif"><img src="./注册页面_files/spacer.gif" width="1" height="25"></td>
+  </tr>
+</tbody></table>
+  <center>
+    
+&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">&nbsp;</font><div><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="31a896653e21dbca80919849b052230e"></div><table width="300" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="#3D7BA3">
+<form name="studentForm" method="post" action="http://192.168.1.109:8080/exams/registdo.do" onsubmit="return checkstudentform(this)"></form>
+ 	<tbody><tr>
+      <td align="center" bgcolor="94C9E7">用户名</td>
+      <td align="left" bgcolor="FFFFFF"><input type="text" name="username" value="" style="width:100%"></td>
+    </tr>
+ 	<tr>
+      <td align="center" bgcolor="94C9E7">姓名</td>
+      <td align="left" bgcolor="FFFFFF"><input type="text" name="name" value="" style="width:100%"></td>
+    </tr>
+ 	<tr>
+      <td align="center" bgcolor="94C9E7">密码</td>
+      <td align="left" bgcolor="FFFFFF"><input type="password" name="oldpassword" value="" style="width:100%"></td>
+    </tr>
+ 	<tr>
+      <td align="center" bgcolor="94C9E7">密码</td>
+      <td align="left" bgcolor="FFFFFF"><input type="password" name="newpassword" value="" style="width:100%"></td>
+    </tr>    
+ 	<tr>
+      <td align="center" bgcolor="94C9E7">性别</td>
+      <td align="left" bgcolor="FFFFFF"><input type="radio" name="sex" value="m">男&nbsp;
+      <input type="radio" name="sex" value="f">女&nbsp;</td>
+    </tr>      
+ 	<tr>
+      <td align="center" bgcolor="94C9E7">地址</td>
+      <td align="left" bgcolor="FFFFFF"><input type="text" name="address" value="" style="width:100%"></td>
+    </tr>    
+ 	<tr>
+      <td align="center" bgcolor="94C9E7">email</td>
+      <td align="left" bgcolor="FFFFFF"><input type="text" name="email" value="" style="width:100%"></td>
+    </tr>   
+ 	<tr>
+      <td align="right" colspan="2" bgcolor="FFFFFF"><input type="button" value="返回" onclick="window.location.href=&#39;/exams/&#39;">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="重置">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="提交">&nbsp;&nbsp;&nbsp;</td>
+    </tr>      
+   
+          	
+</tbody></table></center>
+<script>
+if(!document.studentForm.sex[0].checked&&!document.studentForm.sex[1].checked){
+	document.studentForm.sex[0].checked = true;
+}
+</script>
+  
+
+</body></html>

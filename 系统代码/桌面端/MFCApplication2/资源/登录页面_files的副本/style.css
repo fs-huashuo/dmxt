@@ -1,0 +1,51 @@
+body {
+	color: black; font-size: 14pt; font-weight: bold; cursor: default;
+}
+p {
+	color: black; font-size: 14pt; font-weight: bold; cursor: default;
+}
+td {
+	color: black; font-size: 14pt; font-weight: bold; cursor: default;
+}
+th {
+	color: black; font-size: 14pt; font-weight: bold; cursor: default;
+}
+tr {
+	color: black; font-size: 14pt; font-weight: bold; cursor: default;
+}
+input {
+	color: black; font-size: 14pt; font-weight: bold; cursor: default;
+}
+textarea {
+	color: black; font-size: 14pt; font-weight: bold; cursor: default;
+}
+select {
+	color: black; font-size: 14pt; font-weight: bold; cursor: default;
+}
+a {
+	color: navy; text-decoration: none;
+}
+a:hover {
+	color: red; text-decoration: underline;
+}
+input {
+	border: 1px solid rgb(153, 153, 153); color: rgb(79, 79, 79); cursor: default; background-color: rgb(239, 239, 239);
+}
+textarea {
+	border: 1px solid rgb(153, 153, 153); color: rgb(79, 79, 79); cursor: default; background-color: rgb(239, 239, 239);
+}
+select {
+	border: 1px solid rgb(153, 153, 153); color: rgb(79, 79, 79); cursor: default; background-color: rgb(239, 239, 239);
+}
+body {
+	-ms-scrollbar-base-color: rgb(239, 239, 239); -ms-scrollbar-face-color: rgb(225, 225, 225); -ms-scrollbar-shadow-color: rgb(140, 140, 141); -ms-scrollbar-highlight-color: rgb(225, 225, 225); -ms-scrollbar-darkshadow-color: rgb(239, 239, 239); -ms-scrollbar-arrow-color: rgb(140, 140, 141); -ms-scrollbar-track-color: rgb(239, 239, 239);
+}
+textarea {
+	-ms-scrollbar-base-color: rgb(239, 239, 239); -ms-scrollbar-face-color: rgb(225, 225, 225); -ms-scrollbar-shadow-color: rgb(140, 140, 141); -ms-scrollbar-highlight-color: rgb(225, 225, 225); -ms-scrollbar-darkshadow-color: rgb(239, 239, 239); -ms-scrollbar-arrow-color: rgb(140, 140, 141); -ms-scrollbar-track-color: rgb(239, 239, 239);
+}
+.shadow {
+	
+}
+.white {
+	
+}

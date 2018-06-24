@@ -1,0 +1,181 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>注册新账号</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div text-center>
+    <img class="logo" src="assets/images/dianming.png" alt="">
+  </div>
+  <div>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col>
+          <img src="assets/images/registered_one.png" alt="" *ngIf="registerSlides.getActiveIndex()!=0">
+          <img src="assets/images/registered_one_one.png" alt="" *ngIf="registerSlides.getActiveIndex()==0">
+        </ion-col>
+
+        <ion-col align-self-center>
+          <hr class="line">
+        </ion-col>
+
+        <ion-col>
+          <img src="assets/images/registered_two.png" alt="" *ngIf="registerSlides.getActiveIndex()!=1">
+          <img src="assets/images/registered_two_two.png" alt="" *ngIf="registerSlides.getActiveIndex()==1">
+        </ion-col>
+
+
+        <ion-col align-self-center>
+          <hr class="line">
+        </ion-col>
+
+        <ion-col>
+          <img src="assets/images/registered_four.png" alt="" *ngIf="registerSlides.getActiveIndex()!=3">
+          <img src="assets/images/registered_four_four.png" alt="" *ngIf="registerSlides.getActiveIndex()==3">
+        </ion-col>
+
+      </ion-row>
+
+    </ion-grid>
+
+  </div>
+
+  <div>
+    <ion-slides #registerSlides>
+      <ion-slide>
+        <ion-item>
+        <ion-label>身份</ion-label>
+        <ion-select [(ngModel)]="flag" name="identify"required okText="确定" cancelText="取消">
+          <ion-option [selected]>学生</ion-option>
+          <ion-option>教师</ion-option>
+        </ion-select>
+        </ion-item>
+        <!--<ion-note float-start *ngIf="register.identify=null">-->
+          <!--请选择身份-->
+        <!--</ion-note>-->
+        <button type="submit" ion-button block color="primary" parmary (click)="storageMes()">下一步</button>
+        <button type="submit" ion-button block color="primary" parmary  (click)="previous()" disabled>上一步</button>
+
+      </ion-slide>
+      <ion-slide>
+        <form #messageForm="ngForm">
+          <div *ngIf="flag=='学生'">
+            <ion-item>
+              <ion-input name="tel" type="number" placeholder="请输入您的手机号码" required  pattern="^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,3,5-9]))\\d{8}$" [(ngModel)]="registerUserS.tel" #tel="ngModel">
+              </ion-input>
+            </ion-item>
+
+
+            <ion-note float-start *ngIf="tel.invalid && tel.touched" [hidden]="!tel.errors?.required" style="color: red;font-size: small">请输入手机号码</ion-note>
+            <ion-note float-start *ngIf="tel.invalid && tel.touched" [hidden]="!tel.errors?.pattern" style="color: red;font-size: small">您输入的手机号格式不正确</ion-note>
+            <ion-item>
+              <ion-input name="accountName" type="text" placeholder="请输入账户名" required [(ngModel)]="registerUserS.accountName" #accountName="ngModel" ></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="accountName.invalid && accountName.touched" [hidden]="!accountName.errors?.required" style="color: red;font-size: small">请输入账户名</ion-note>
+            <ion-item>
+              <ion-input name="name" type="text" placeholder="请输入姓名" required [(ngModel)]="registerUserS.name" #name="ngModel" ></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="name.invalid && name.touched" [hidden]="!name.errors?.required" style="color: red;font-size: small">请输入姓名</ion-note>
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="请输入登录密码(字母+数字)" required [(ngModel)]="registerUserS.password" #password="ngModel" pattern="^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$"></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="password.invalid && password.touched" [hidden]="!password.errors?.required" style="color: red;font-size: small">请输入登录密码</ion-note>
+            <ion-note float-start *ngIf="password.invalid && password.touched" [hidden]="!password.errors?.pattern" style="color: red;font-size: small">您输入的登录密码格式不正确</ion-note>
+            <ion-item>
+              <ion-input name="student_ID" type="text" placeholder="请输入学号" required [(ngModel)]="registerUserS.student_ID" #student_ID="ngModel" ></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="student_ID.invalid && student_ID.touched" [hidden]="!student_ID.errors?.required" style="color: red;font-size: small">请输入学号</ion-note>
+            <ion-item>
+              <ion-input name="school" type="text" placeholder="请输入学校" required [(ngModel)]="registerUserS.school" #school="ngModel" ></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="school.invalid && school.touched" [hidden]="!school.errors?.required" style="color: red;font-size: small">请输入学校</ion-note>
+            <ion-item>
+              <ion-input name="college" type="text" placeholder="请输入学院" required [(ngModel)]="registerUserS.college" #college="ngModel" ></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="college.invalid && college.touched" [hidden]="!college.errors?.required" style="color: red;font-size: small">请输入学院</ion-note>
+            <ion-item>
+              <ion-input name="profession" type="text" placeholder="请输入专业" required [(ngModel)]="registerUserS.profession" #profession="ngModel" ></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="profession.invalid && profession.touched" [hidden]="!profession.errors?.required" style="color: red;font-size: small">请输入专业</ion-note>
+            <ion-item>
+              <ion-input name="s_class" type="text" placeholder="请输入班级" required [(ngModel)]="registerUserS.s_class" #s_class="ngModel"></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="s_class.invalid && s_class.touched" [hidden]="!s_class.errors?.required" style="color: red;font-size: small">请输入班级</ion-note>
+
+            <ion-item>
+                <ion-label>年级</ion-label>
+                <ion-select [(ngModel)]="registerUserS.grade" name="grade" required okText="确定" cancelText="取消">
+                  <ion-option [selected]>大一</ion-option>
+                  <ion-option>大二</ion-option>
+                  <ion-option>大三</ion-option>
+                  <ion-option>大四</ion-option>
+                </ion-select>
+            </ion-item>
+            <button type="submit" ion-button block color="primary" parmary (click)="returnSignin()" [disabled]="tel.invalid||college.invalid||password.invalid||student_ID.invalid||school.invalid||name.invalid||profession.invalid||s_class.invalid">下一步</button>
+            <button type="submit" ion-button block color="primary" parmary  (click)="previous()">上一步</button>
+          </div>
+          <div *ngIf="flag=='教师'">
+            <ion-item>
+              <ion-input name="t_tel" type="number" placeholder="请输入您的手机号码" required  pattern="^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,3,5-9]))\\d{8}$" [(ngModel)]="registerUserT.tel" #t_tel="ngModel">
+              </ion-input>
+            </ion-item>
+
+            <ion-note float-start *ngIf="t_tel.invalid && t_tel.touched" [hidden]="!t_tel.errors?.required" style="color: red;font-size: small">请输入手机号码</ion-note>
+            <ion-note float-start *ngIf="t_tel.invalid && t_tel.touched" [hidden]="!t_tel.errors?.pattern" style="color: red;font-size: small">您输入的手机号格式不正确</ion-note>
+            <ion-item>
+              <ion-input name="t_accountName" type="text" placeholder="请输入账户名" required [(ngModel)]="registerUserT.accountName" #t_accountName="ngModel" ></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="t_accountName.invalid && t_accountName.touched" [hidden]="!t_accountName.errors?.required" style="color: red;font-size: small">请输入账户名</ion-note>
+
+            <ion-item>
+              <ion-input name="t_name" type="text" placeholder="请输入姓名" required [(ngModel)]="registerUserT.name" #t_name="ngModel" ></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="t_name.invalid && t_name.touched" [hidden]="!t_name.errors?.required" style="color: red;font-size: small">请输入姓名</ion-note>
+            <ion-item>
+              <ion-input name="t_password" type="password" placeholder="请输入登录密码" required [(ngModel)]="registerUserT.password" #t_password="ngModel" pattern="^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$"></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="t_password.invalid && t_password.touched" [hidden]="!t_password.errors?.required" style="color: red;font-size: small">请输入登录密码</ion-note>
+            <ion-note float-start *ngIf="t_password.invalid && t_password.touched" [hidden]="!t_password.errors?.pattern" style="color: red;font-size: small">您输入的登录密码格式不正确</ion-note>
+            <ion-item>
+              <ion-input name="teacher_ID" type="text" placeholder="请输入工号" required [(ngModel)]="registerUserT.teacher_ID" #teacher_ID="ngModel" ></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="teacher_ID.invalid && teacher_ID.touched" [hidden]="!teacher_ID.errors?.required" style="color: red;font-size: small">请输入工号/学号</ion-note>
+            <ion-item>
+              <ion-input name="t_school" type="text" placeholder="请输入学校" required [(ngModel)]="registerUserT.school" #t_school="ngModel" ></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="t_school.invalid && t_school.touched" [hidden]="!t_school.errors?.required" style="color: red;font-size: small">请输入学校</ion-note>
+            <ion-item>
+              <ion-input name="t_college" type="text" placeholder="请输入学院" required [(ngModel)]="registerUserT.college" #t_college="ngModel" ></ion-input>
+            </ion-item>
+            <ion-note float-start *ngIf="t_college.invalid && t_college.touched" [hidden]="!t_college.errors?.required" style="color: red;font-size: small">请输入学院</ion-note>
+            <button type="submit" ion-button block color="primary" parmary (click)="returnSignin()" [disabled]="t_tel.invalid||t_password.invalid||teacher_ID.invalid||t_school.invalid||t_name.invalid">下一步</button>
+            <button type="submit" ion-button block color="primary" parmary  (click)="previous()">上一步</button>
+          </div>
+        </form>
+      </ion-slide>
+
+      <ion-slide>
+      <span>
+        注册成功!
+      </span>
+
+        <button type="submit" ion-button block color="primary" parmary  (click)="goHome()">回到首页</button>
+
+      </ion-slide>
+
+    </ion-slides>
+
+  </div>
+
+
+
+</ion-content>

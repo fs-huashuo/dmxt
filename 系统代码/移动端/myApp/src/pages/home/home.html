@@ -1,0 +1,82 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>学生签到</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="togetposision()">
+        <ion-label>点击定位</ion-label>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+
+
+  <ion-item>
+    <ion-label>请选择课程</ion-label>
+    <ion-select name="Flag" [(ngModel)]="course" #Flag="ngModel" interface="popover">
+      <ion-option *ngFor="let item of coursedata" [value]="item">{{item.course_name}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-list>
+    <ion-row>
+      <ion-col col-2>经度</ion-col>
+      <ion-col>
+        <div class="in">
+          <ion-input id="jingdu"></ion-input>
+        </div>
+      </ion-col>
+
+    </ion-row>
+  </ion-list>
+  <ion-list>
+    <ion-row>
+      <ion-col col-2>纬度</ion-col>
+      <ion-col>
+        <div class="in">
+          <ion-input id="weidu"></ion-input>
+        </div>
+      </ion-col>
+
+    </ion-row>
+  </ion-list>
+  <ion-list>
+    <ion-item no-padding>
+      <ion-label>课程编号:</ion-label>
+      <ion-note item-end>{{course.course_number}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item no-padding>
+      <ion-label>课程名称:</ion-label>
+      <ion-note item-end>{{course.course_name}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item no-padding>
+      <ion-label>课程时间:</ion-label>
+      <ion-note item-end>{{course.class_time}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item no-padding>
+      <ion-label>课程老师:</ion-label>
+      <ion-note item-end>{{course.name}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item no-padding>
+      <ion-label>课程地点:</ion-label>
+      <ion-note item-end>{{course.class_location}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col><button type="submit" block ion-button color="primary" (click)="addstudentclick()">签到</button></ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>
